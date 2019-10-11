@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=Bilbo+Swash+Caps&display=swap');
+
+body {
+    background-image: url('../image/background.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main {
+    padding-top: 4em;
+    font-size: 26pt;
+    font-family: 'Bilbo Swash Caps', cursive;
+}
+
+.desktop {
+    display:flex;
+}
+
+.whisky {
+    filter: drop-shadow(15px 15px 5px var(--shadow));
+    height:190px;
+}
+.inkpen {
+    filter: drop-shadow(15px 15px 5px var(--shadow));
+    height: 370px;
+    padding-top: 210px;
+}
+.empty-whisky
+{
+    filter: drop-shadow(15px 15px 5px var(--shadow));
+    height:370px;
+    display: none;
+}
+.page {
+    filter: drop-shadow(15px 15px 5px var(--shadow));
+}
+.pages {
+    display: flex;
+    width: auto;
+    flex-basis : 65%;
+    margin:1em;
+}
+.page {
+    height:65vh;
+    padding: 3vw;
+    width: 50%;
+    background-blend-mode: multiply;
+}
+.leftpage {
+    background: url('../image/paper.png'), linear-gradient(270deg, rgba(157,158,137,1) 0%, rgba(233,226,187,1) 5%, rgba(255,251,203,1) 18%);
+    border-radius: 24px 40% 40% 24px/8px 8px 8px 8px;
+}
+
+.rightpage {
+    background: url('../image/paper.png'), linear-gradient(90deg, rgba(157,158,137,1) 0%, rgba(233,226,187,1) 5%, rgba(255,251,203,1) 18%);
+    border-radius:  40% 24px 24px 40%/8px 8px 8px 8px;
+    overflow: auto;
+}
+
+.list-group {
+    font-size : 35px;
+    list-style-type: none;
+    width: 100%;
+}
+
+/*Media Queries */
+
+@media screen and (min-width: 1100px) and (max-width: 1200px) {
+    .inkpen {
+        display: none;
+    }
+}
+@media screen and (min-width: 1000px) and (max-width: 1099px) {
+    .empty-whisky {
+        display: flex;
+        filter: drop-shadow(15px 15px 5px var(--shadow));
+        height:250px;
+    }
+    .whisky {
+        display: none;
+    }
+    .inkpen {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1000px) {
+    .empty-whisky {
+        display: none;
+    }
+
+    .whisky {
+        display: none;
+    }
+
+    .inkpen {
+        display: none;
+    }
+
+    .pages {
+        display: flex;
+        width: auto;
+        flex-basis: 100%;
+        margin: 1em;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .pages {
+        display: flex;
+        flex-basis: 100%;
+        margin: 1em;
+        flex-direction: column;
+    }
+    .page {
+        width: 100%;
+    }
+    .empty-whisky {
+        display: none;
+    }
+
+    .whisky {
+        display: none;
+    }
+
+    .inkpen {
+        display: none;
+    }
+
+}
